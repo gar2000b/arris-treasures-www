@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Key Handler</title>
+<script type="text/javascript">
+
+function registerKeyboardHandler() {
+	document.getElementById("abc").addEventListener('keyup', displayunicode, false);
+}
+
+function displayunicode(e){
+
+	// Uncomment to see what key is pressed.
+	 var unicode = e.keyCode ? e.keyCode : e.charCode;
+	 alert(unicode);
+	
+	// Uncomment to see CTRL + d being pressed.
+    // This would test for whichever key is 40 and the ctrl key at the same time
+//    if (e.ctrlKey && e.keyCode == 68) {
+//        // call your function to do the thing
+//        alert("CTRL + d pressed.");
+//    }
+
+	// Uncomment to see just d being pressed.
+//	if (e.keyCode == 68) {
+//		alert("d was pressed.");
+//	}
+	
+}
+
+</script>
+</head>
+
+<body onload="registerKeyboardHandler();">
+<form>
+<input id="abc" name="abc" type="text" size="2" maxlength="1" onkeyup="" />
+</form>
+
+</body>
+</html>

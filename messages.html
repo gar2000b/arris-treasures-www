@@ -1,0 +1,23 @@
+<div class="title_padding">Messages</div>
+<br />
+<br />
+<div class="content">
+  <input type="button" value="Get Messages" onClick="messagePage.ajaxGetMessages();" />
+    <br />
+    <br />
+  <div id="messages"></div>
+  <br />
+  <p align="center">
+      <input type="button" value="<<" onClick="messagePage.doFilter();" />
+      <input type="button" value="< Previous" onClick="messagePage.pp();" />
+      <span id = "pageLinks">
+          <a href="http://www.google.com">1</a>
+          <a href="http://www.google.com">2</a>
+          <a href="http://www.google.com">3</a>
+          <a href="http://www.google.com">4</a>
+          <a href="http://www.google.com">5</a>
+      </span>
+      <input type="button" value="Next >" onClick="messagePage.np();" />
+      <input type="button" value=">>" onClick="messagePage.np();" />
+  </p>
+</div>

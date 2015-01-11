@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>Spinning View Template</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript">
+var prefix = "";
+var fileName = "";
+var moving; // do not change this line (this variable is used within the function)
+var views = new Array(); // do not change this line
+for (var i=0; i<31;i++) { // preload the images within this suggested for loop structure 
+
+if(i<10)
+{
+prefix = "0" + i;
+}
+else
+{
+prefix = i;
+}
+
+fileName = "http://www.arristreasures.com/images/camera/" + prefix + ".JPG";
+// alert(fileName);
+views[i] = fileName;
+
+} // this bracket is the end of the for loop structure
+
+var preload = new Array()
+for (var i=0; i<31;i++)
+{
+preload[i] = new Image();
+preload[i].src = views[i];
+}
+
+
+
+var position = 17; // will use this to record which image displayed by web page
+
+function rotate(direction,speed) {
+	// add your changes to the function below this line
+	
+position = position + direction;
+
+if(position > 30)
+{
+position = 0;
+}
+
+if(position < 0)
+{
+position = 30;
+}
+
+
+document.getElementById("spinner").src = views[position];
+
+
+
+	// add MOST changes to the function above this line
+	self.clearTimeout(moving); // do not change this line
+	// change the following line to execute the command below only if the speed is NOT zero
+	
+	if(speed > 0)
+	{
+	moving=self.setTimeout('rotate('+direction+','+speed+');',200/speed);
+	}
+}
+</script>
+
+</head>
+<!-- do not modify the file after this line -->
+<body bgcolor="#FFFFFF" text="#000000">
+<img src="http://www.arristreasures.com/images/camera/17.JPG" width="400" height="310" border="0" name="spinner" id="spinner" usemap="#spinnerMap"> 
+<map name="spinnerMap"> 
+<area shape="rect" coords="0,0,57,310" href="#" onMouseOver="rotate(-1,4);" 
+onMouseOut="rotate(0,0);" onClick="return false;">
+<area shape="rect" coords="58,0,114,310" href="#" onMouseOver="rotate(-1,2);" 
+onMouseOut="rotate(0,0);" onClick="return false;">
+<area shape="rect" coords="115,0,171,310" href="#" onMouseOver="rotate(-1,1);" 
+onMouseOut="rotate(0,0);" onClick="return false;">
+<area shape="rect" coords="172,0,229,310" href="#" onMouseOver="rotate(0,0);" 
+onMouseOut="rotate(0,0);" onClick="return false;">
+<area shape="rect" coords="230,0,286,310" href="#" onMouseOver="rotate(1,1);" 
+onMouseOut="rotate(0,0);" onClick="return false;">
+<area shape="rect" coords="287,0,343,310" href="#" onMouseOver="rotate(1,2);" 
+onMouseOut="rotate(0,0);" onClick="return false;">
+<area shape="rect" coords="344,0,400,310" href="#" onMouseOver="rotate(1,4);" 
+onMouseOut="rotate(0,0);" onClick="return false;">
+</map>
+</body>
+</html>

@@ -1,0 +1,932 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Update Foreground Image</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+        
+        function updateImage() {
+            switch(document.getElementById('selectList').value) {
+                case '0':
+                document.getElementById('background').style.backgroundImage = "url('http://www.arristreasures.com/images/tartan/black-country.jpg?version=1')";
+                break;
+                case '1':
+                document.getElementById('background').style.backgroundImage = "url('http://www.arristreasures.com/images/tartan/blue-anderson.jpg?version=1')";
+                break;
+                case '2':
+                document.getElementById('background').style.backgroundImage = "url('http://www.arristreasures.com/images/tartan/brown-heather.jpg?version=1')";
+                break;
+                case '3':
+                document.getElementById('background').style.backgroundImage = "url('http://www.arristreasures.com/images/tartan/green-cavalier.jpg?version=1')";
+                break;
+                case '4':
+                document.getElementById('background').style.backgroundImage = "url('http://www.arristreasures.com/images/tartan/orange-johnston.jpg?version=1')";
+                break;
+                case '5':
+                document.getElementById('background').style.backgroundImage = "url('http://www.arristreasures.com/images/tartan/pink-think.jpg?version=1')";
+                break;
+                case '6':
+                document.getElementById('background').style.backgroundImage = "url('http://www.arristreasures.com/images/tartan/purple-macpherson.jpg?version=1')";
+                break;
+                case '7':
+                document.getElementById('background').style.backgroundImage = "url('http://www.arristreasures.com/images/tartan/red-royal-stewart.jpg?version=1')";
+                break;
+                case '8':
+                document.getElementById('background').style.backgroundImage = "url('http://www.arristreasures.com/images/tartan/white-black.jpg?version=1')";
+                break;
+                case '9':
+                document.getElementById('background').style.backgroundImage = "url('http://www.arristreasures.com/images/tartan/yellow-fraser.jpg?version=1')";
+                break;
+            }
+        }
+        
+        function updateKiltPinImage() {
+    
+            switch(document.getElementById('selectListKiltPin').value) {
+                case '0':
+                document.images.foreground.src = 'http://www.arristreasures.com/images/kilt_pins_vertical/1.png';
+                document.images.badge.src = 'http://www.arristreasures.com/images/clan_badges/1.png';
+                break;
+                case '1':
+                document.images.foreground.src = 'http://www.arristreasures.com/images/kilt_pins_vertical/2.png';
+                document.images.badge.src = 'http://www.arristreasures.com/images/clan_badges/2.png';
+                break;
+                case '2':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/6.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/6.png';
+                break;
+                case '3':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/7.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/7.png';
+                break;
+                case '4':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/8.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/8.png';
+                break;
+                case '5':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/9.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/9.png';
+                break;
+                case '6':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/12.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/12.png';
+                break;
+                case '7':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/14.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/14.png';
+                break;
+                case '8':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/15.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/15.png';
+                break;
+                case '9':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/21.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/21.png';
+                break;
+                case '10':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/24.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/24.png';
+                break;
+                case '11':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/25.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/25.png';
+                break;
+                case '12':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/27.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/27.png';
+                break;
+                case '13':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/28.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/28.png';
+                break;
+                case '14':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/29.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/29.png';
+                break;
+                case '15':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/31.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/31.png';
+                break;
+                case '16':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/33.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/33.png';
+                break;
+                case '17':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/36.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/36.png';
+                break;
+                case '18':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/38.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/38.png';
+                break;
+                case '19':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/39.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/39.png';
+                break;
+                case '20':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/41.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/41.png';
+                break;
+                case '21':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/44.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/44.png';
+                break;
+                case '22':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/55.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/55.png';
+                break;
+                case '23':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/56.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/56.png';
+                break;
+                case '24':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/57.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/57.png';
+                break;
+                case '25':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/60.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/60.png';
+                break;
+                case '26':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/61.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/61.png';
+                break;
+                case '27':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/62.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/62.png';
+                break;
+                case '28':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/64.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/64.png';
+                break;
+                case '29':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/66.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/66.png';
+                break;
+                case '30':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/67.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/67.png';
+                break;
+                case '31':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/68.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/68.png';
+                break;
+                case '32':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/72.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/72.png';
+                break;
+                case '33':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/73.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/73.png';
+                break;
+                case '34':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/74.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/74.png';
+                break;
+                case '35':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/75.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/75.png';
+                break;
+                case '36':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/76.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/76.png';
+                break;
+                case '37':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/78.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/78.png';
+                break;
+                case '38':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/79.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/79.png';
+                break;
+                case '39':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/82.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/82.png';
+                break;
+                case '40':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/84.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/84.png';
+                break;
+                case '41':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/88.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/88.png';
+                break;
+                case '42':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/89.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/89.png';
+                break;
+                case '43':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/90.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/90.png';
+                break;
+                case '44':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/92.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/92.png';
+                break;
+                case '45':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/93.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/93.png';
+                break;
+                case '46':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/94.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/94.png';
+                break;
+                case '47':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/95.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/95.png';
+                break;
+                case '48':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/101.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/101.png';
+                break;
+                case '49':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/103.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/103.png';
+                break;
+                case '50':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/106.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/106.png';
+                break;
+                case '51':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/107.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/107.png';
+                break;
+                case '52':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/108.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/108.png';
+                break;
+                case '53':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/109.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/109.png';
+                break;
+                case '54':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/110.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/110.png';
+                break;
+                case '55':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/111.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/111.png';
+                break;
+                case '56':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/113.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/113.png';
+                break;
+                case '57':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/114.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/114.png';
+                break;
+                case '58':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/116.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/116.png';
+                break;
+                case '59':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/118.png';
+    
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/118.png';
+                break;
+                case '60':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/119.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/119.png';
+                break;
+                case '61':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/121.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/121.png';
+                break;
+                case '62':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/122.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/122.png';
+                break;
+                case '63':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/123.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/123.png';
+                break;
+                case '64':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/126.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/126.png';
+                break;
+                case '65':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/127.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/127.png';
+                break;
+                case '66':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/129.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/129.png';
+                break;
+                case '67':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/131.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/131.png';
+                break;
+                case '68':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/132.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/132.png';
+                break;
+                case '69':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/133.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/133.png';
+                break;
+                case '70':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/136.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/136.png';
+                break;
+                case '71':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/139.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/139.png';
+                break;
+                case '72':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/141.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/141.png';
+                break;
+                case '73':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/142.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/142.png';
+                break;
+                case '74':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/143.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/143.png';
+                break;
+                case '75':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/144.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/144.png';
+                break;
+                case '76':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/145.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/145.png';
+                break;
+                case '77':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/146.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/146.png';
+                break;
+                case '78':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/149.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/149.png';
+                break;
+                case '79':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/150.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/150.png';
+                break;
+                case '80':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/152.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/152.png';
+                break;
+                case '81':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/153.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/153.png';
+                break;
+                case '82':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/155.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/155.png';
+                break;
+                case '83':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/159.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/159.png';
+                break;
+                case '84':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/162.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/162.png';
+                break;
+                case '85':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/167.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/167.png';
+                break;
+                case '86':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/169.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/169.png';
+                break;
+                case '87':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/170.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/170.png';
+                break;
+                case '88':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/172.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/172.png';
+                break;
+                case '89':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/174.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/174.png';
+                break;
+                case '90':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/176.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/176.png';
+                break;
+                case '91':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/177.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/177.png';
+                break;
+                case '92':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/180.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/180.png';
+                break;
+                case '93':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/182.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/182.png';
+                break;
+                case '94':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/183.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/183.png';
+                break;
+                case '95':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/184.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/184.png';
+                break;
+                case '96':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/187.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/187.png';
+                break;
+                case '97':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/191.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/191.png';
+                break;
+                case '98':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/192.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/192.png';
+                break;
+                case '99':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/195.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/195.png';
+                break;
+                case '100':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/196.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/196.png';
+                break;
+                case '101':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/197.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/197.png';
+                break;
+                case '102':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/199.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/199.png';
+                break;
+                case '103':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/200.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/200.png';
+                break;
+                case '104':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/201.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/201.png';
+                break;
+                case '105':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/208.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/208.png';
+                break;
+                case '106':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/209.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/209.png';
+                break;
+                case '107':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/210.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/210.png';
+                break;
+                case '108':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/213.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/213.png';
+                break;
+                case '109':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/216.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/216.png';
+                break;
+                case '110':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/218.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/218.png';
+                break;
+                case '111':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/220.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/220.png';
+                break;
+                case '112':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/221.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/221.png';
+                break;
+                case '113':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/231.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/231.png';
+                break;
+                case '114':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/233.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/233.png';
+                break;
+                case '115':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/236.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/236.png';
+                break;
+                case '116':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/237.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/237.png';
+                break;
+                case '117':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/238.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/238.png';
+                break;
+                case '118':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/239.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/239.png';
+                break;
+                case '119':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/241.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/241.png';
+                break;
+                case '120':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/244.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/244.png';
+                break;
+                case '121':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/245.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/245.png';
+                break;
+                case '122':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/246.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/246.png';
+                break;
+                case '123':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/248.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/248.png';
+                break;
+                case '124':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/249.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/249.png';
+                break;
+                case '125':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/252.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/252.png';
+                break;
+                case '126':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/253.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/253.png';
+                break;
+                case '127':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/254.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/254.png';
+                break;
+                case '128':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/258.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/258.png';
+                break;
+                case '129':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/261.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/261.png';
+                break;
+                case '130':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/262.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/262.png';
+                break;
+                case '131':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/265.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/265.png';
+                break;
+                case '132':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/267.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/267.png';
+                break;
+                case '133':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/268.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/268.png';
+                break;
+                case '134':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/270.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/270.png';
+                break;
+                case '135':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/272.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/272.png';
+                break;
+                case '136':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/273.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/273.png';
+                break;
+                case '137':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/274.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/274.png';
+                break;
+                case '138':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/275.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/275.png';
+                break;
+                case '139':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/277.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/277.png';
+                break;
+                case '140':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/278.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/278.png';
+                break;
+                case '141':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/279.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/279.png';
+                break;
+                case '142':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/280.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/280.png';
+                break;
+                case '143':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/283.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/283.png';
+                break;
+                case '144':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/284.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/284.png';
+                break;
+                case '145':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/285.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/285.png';
+                break;
+                case '146':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/289.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/289.png';
+                break;
+                case '147':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/291.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/291.png';
+                break;
+                case '148':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/292.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/292.png';
+                break;
+                case '149':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/299.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/299.png';
+                break;
+                case '150':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/300.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/300.png';
+                break;
+                case '151':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/302.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/302.png';
+                break;
+                case '152':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/303.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/302.png';
+                break;
+                case '153':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/308.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/308.png';
+                break;
+                case '154':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/309.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/309.png';
+                break;
+                case '155':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/310.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/310.png';
+                break;
+                case '156':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/311.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/311.png';
+                break;
+                case '157':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/314.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/314.png';
+                break;
+                case '158':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/317.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/317.png';
+                break;
+                case '159':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/319.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/319.png';
+                break;
+                case '160':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/323.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/323.png';
+                break;
+                case '161':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/327.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/327.png';
+                break;
+                case '162':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/332.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/332.png';
+                break;
+                case '163':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/333.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/333.png';
+                break;
+                case '164':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/335.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/335.png';
+                break;
+                case '165':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/338.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/338.png';
+                break;
+                case '166':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/339.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/339.png';
+                break;
+                case '167':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/341.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/341.png';
+                break;
+                case '168':
+                document.getElementById('foreground').src = 'http://www.arristreasures.com/images/kilt_pins_vertical/347.png';
+                document.getElementById('badge').src = 'http://www.arristreasures.com/images/clan_badges/347.png';
+                break;
+            }
+        }
+    
+    </script>
+    <div align="center">
+        <div id="background" name="background" style="display:inline-block; width:187px; background-repeat:no-repeat; background-image:url(http://www.arristreasures.com/images/tartan/black-country.jpg); height:375;">
+                        <!-- <img src="http://www.arristreasures.com/images/tartan/black-country.jpg" id="background" name="background" alt="tree" width="187" height="375" style="left:300px; padding:5px;" />-->
+                        <img src="http://www.arristreasures.com/images/kilt_pins_vertical/1.png" alt="foreground" name="foreground" width="187" height="375" id="foreground" title="pin" />
+        </div>
+        <img src="http://www.arristreasures.com/images/clan_badges/1.png" id="badge" name="badge" />
+    </div>
+    <p>&nbsp;</p>
+    <p>
+      <label>
+      <div align="center">Select your Badge
+        <select name="selectListKiltPin" id="selectListKiltPin" onchange="updateKiltPinImage();" style="width:200px;">
+          <option value="0" selected="selected">Clan Abercrombie</option>
+          <option value="1">Clan Agnew</option>
+          <option value="2">Clan Anderson</option>
+          <option value="3">Clan Arbuthnott</option>
+          <option value="4">Clan Armstrong</option>
+          <option value="5">Clan Baillie</option>
+          <option value="6">Clan Barclay</option>
+          <option value="7">Clan Bell</option>
+          <option value="8">Clan Bethune</option>
+          <option value="9">Clan Borthwick</option>
+          <option value="10">Clan Boyd</option>
+          <option value="11">Clan Brodie</option>
+          <option value="12">Clan Bruce</option>
+          <option value="13">Clan Buchan</option>
+          <option value="14">Clan Buchanan</option>
+          <option value="15">Clan Burnett</option>
+          <option value="16">Clan Cameron</option>
+          <option value="17">Clan Campbell</option>
+          <option value="18">Clan Campbell Of Breadalbane</option>
+          <option value="19">Clan Campbell Of Cawdor</option>
+          <option value="20">Clan Carmichael</option>
+          <option value="21">Clan Charteris</option>
+          <option value="22">Clan Cochrane</option>
+          <option value="23">Clan Cockburn</option>
+          <option value="24">Clan Colquhoun</option>
+          <option value="25">Clan Craig</option>
+          <option value="26">Clan Cranston</option>
+          <option value="27">Clan Crawford</option>
+          <option value="28">Clan Cunningham</option>
+          <option value="29">Clan Dalrymple</option>
+          <option value="30">Clan Dalzell</option>
+          <option value="31">Clan Davidson</option>
+          <option value="32">Clan Douglas</option>
+          <option value="33">Clan Drummond</option>
+          <option value="34">Clan Dunbar</option>
+          <option value="35">Clan Duncan</option>
+          <option value="36">Clan Dundas</option>
+          <option value="37">Clan Elliot</option>
+          <option value="38">Clan Elphinstone</option>
+          <option value="39">Clan Farquharson</option>
+          <option value="40">Clan Fergusson</option>
+          <option value="41">Clan Forbes</option>
+          <option value="42">Clan Forrester</option>
+          <option value="43">Clan Forsyth</option>
+          <option value="44">Clan Fraser</option>
+          <option value="45">Clan Fraser Of Lovat</option>
+          <option value="46">Clan Galbraith</option>
+          <option value="47">Clan Galloway</option>
+          <option value="48">Clan Gordon</option>
+          <option value="49">Clan Graham</option>
+          <option value="50">Clan Grant</option>
+          <option value="51">Clan Gray</option>
+          <option value="52">Clan Gunn</option>
+          <option value="53">Clan Guthrie</option>
+          <option value="54">Clan Haig</option>
+          <option value="55">Clan Haldane</option>
+          <option value="56">Clan Hamilton</option>
+          <option value="57">Clan Hannay</option>
+          <option value="58">Clan Hay</option>
+          <option value="59">Clan Henderson</option>
+          <option value="60">Clan Hepburn</option>
+          <option value="61">Clan Home</option>
+          <option value="62">Clan Hope-Vere</option>
+          <option value="63">Clan Hunter</option>
+          <option value="64">Clan Innes</option>
+          <option value="65">Clan Irvine</option>
+          <option value="66">Clan Jardine</option>
+          <option value="67">Clan Keith</option>
+          <option value="68">Clan Kennedy</option>
+          <option value="69">Clan Kerr</option>
+          <option value="70">Clan Kincaid</option>
+          <option value="71">Clan Lamont</option>
+          <option value="72">Clan Leask</option>
+          <option value="73">Clan Lennox</option>
+          <option value="74">Clan Leslie</option>
+          <option value="75">Clan Lindsay</option>
+          <option value="76">Clan Livingston</option>
+          <option value="77">Clan Lockhart</option>
+          <option value="78">Clan Lyon</option>
+          <option value="79">Clan MacAlister</option>
+          <option value="80">Clan MacAulay</option>
+          <option value="81">Clan MacBain</option>
+          <option value="82">Clan MacCallum</option>
+          <option value="83">Clan MacDonald</option>
+          <option value="84">Clan MacDonald Of Clanranald</option>
+          <option value="85">Clan MacDonell Of Glengarry</option>
+          <option value="86">Clan MacDougall</option>
+          <option value="87">Clan MacDuff</option>
+          <option value="88">Clan MacEwan</option>
+          <option value="89">Clan MacFarlane</option>
+          <option value="90">Clan MacGillivray</option>
+          <option value="91">Clan MacGregor</option>
+          <option value="92">Clan MacInnes</option>
+          <option value="93">Clan MacIntyre</option>
+          <option value="94">Clan MacIver</option>
+          <option value="95">Clan MacKay</option>
+          <option value="96">Clan MacKenzie</option>
+          <option value="97">Clan MacKinnon</option>
+          <option value="98">Clan MacKintosh</option>
+          <option value="99">Clan MacLaine Of Lochbuie</option>
+          <option value="100">Clan MacLaren</option>
+          <option value="101">Clan MacLean</option>
+          <option value="102">Clan MacLellan</option>
+          <option value="103">Clan MacLennan</option>
+          <option value="104">Clan MacLeod</option>
+          <option value="105">Clan MacMillan</option>
+          <option value="106">Clan MacNab</option>
+          <option value="107">Clan MacNaughton</option>
+          <option value="108">Clan MacNicol</option>
+          <option value="109">Clan MacPherson</option>
+          <option value="110">Clan MacQuarrie</option>
+          <option value="111">Clan MacQueen</option>
+          <option value="112">Clan MacRae</option>
+          <option value="113">Clan Maitland</option>
+          <option value="114">Clan Mar</option>
+          <option value="115">Clan Matheson</option>
+          <option value="116">Clan Maxwell</option>
+          <option value="117">Clan Melville</option>
+          <option value="118">Clan Menzies</option>
+          <option value="119">Clan Middleton</option>
+          <option value="120">Clan Moffat</option>
+          <option value="121">Clan Moncrieff</option>
+          <option value="122">Clan Montgomery</option>
+          <option value="123">Clan Morrison</option>
+          <option value="124">Clan Mow</option>
+          <option value="125">Clan Muir</option>
+          <option value="126">Clan Munro</option>
+          <option value="127">Clan Murray</option>
+          <option value="128">Clan Napier</option>
+          <option value="129">Clan Ogilvie</option>
+          <option value="130">Clan Oliphant</option>
+          <option value="131">Clan Pollock</option>
+          <option value="132">Clan Pringle</option>
+          <option value="133">Clan Ramsay</option>
+          <option value="134">Clan Rattray</option>
+          <option value="135">Clan Robertson</option>
+          <option value="136">Clan Rollo</option>
+          <option value="137">Clan Rose</option>
+          <option value="138">Clan Ross</option>
+          <option value="139">Clan Ruthven</option>
+          <option value="140">Clan Scott</option>
+          <option value="141">Clan Scrymgeour</option>
+          <option value="142">Clan Sempill</option>
+          <option value="143">Clan Shaw Of Tordarroch</option>
+          <option value="144">Clan Sinclair</option>
+          <option value="145">Clan Skene</option>
+          <option value="146">Clan Spens</option>
+          <option value="147">Clan Stewart</option>
+          <option value="148">Clan Stewart Of Appin</option>
+          <option value="149">Clan Strachan</option>
+          <option value="150">Clan Stuart Of Bute</option>
+          <option value="151">Clan Sutherland</option>
+          <option value="152">Clan Swinton</option>
+          <option value="153">Clan Trotter</option>
+          <option value="154">Clan Turnbull</option>
+          <option value="155">Clan Tweedie</option>
+          <option value="156">Clan Urquhart</option>
+          <option value="157">Clan Wallace</option>
+          <option value="158">Clan Wedderburn</option>
+          <option value="159">Clan Wemyss</option>
+          <option value="160">Clan Young</option>
+          <option value="161">Clan Bannerman</option>
+          <option value="162">Clan Crichton</option>
+          <option value="163">Clan Darroch</option>
+          <option value="164">Clan Stirling</option>
+          <option value="165">Clan Macarthur</option>
+          <option value="166">Clan Macdowall</option>
+          <option value="167">Clan Majoribanks</option>
+          <option value="168">Clan Fotheringham</option>
+        </select>
+      </div>
+      </label>
+    </p>
+    <p align="center">
+          <label>Select your Tartan 
+          <select name="selectList" id="selectList" onchange="updateImage();" style="width:200px;">
+            <option value="0" selected="selected">(Black) Country</option>
+            <option value="1">(Blue) Anderson</option>
+            <option value="2">(Brown) Heather</option>
+            <option value="3">(Green) Cavalier</option>
+            <option value="4">(Orange) Johnston</option>
+            <option value="5">(Pink) Think</option>
+            <option value="6">(Purple) MacPherson</option>
+            <option value="7">(Red) Royal Stewart</option>
+            <option value="8">(White) Black</option>
+            <option value="9">(Yellow) Fraser</option>
+          </select>
+          </label>
+	</p>
+</body>
+</html>

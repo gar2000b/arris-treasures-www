@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Arris Treasures</title>
+<LINK href="css/main.css" rel="stylesheet" type="text/css">
+<link href="ajaxphpupload/style/style.css" rel="stylesheet" type="text/css" />
+<link type="text/css" href="css/ui-darkness/jquery-ui-1.8.23.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="javascripts/common.js"></script>
+<script type="text/javascript" src="javascripts/index.js"></script>
+<script type="text/javascript" src="javascripts/xmlhttpobject.js"></script>
+<script type="text/javascript" src="javascripts/jquery-ui-1-8-23/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery-ui-1-8-23/jquery-ui-1.8.23.custom.min.js"></script>
+<script type="text/javascript">
+function startUpload(){
+	// alert('Is start upload called?');
+      document.getElementById('f1_upload_process').style.visibility = 'visible';
+      // document.getElementById('f1_upload_form').style.visibility = 'hidden';
+      return true;
+}
+
+function stopUpload(success, info){
+		var result = '';
+		if (success == 1){
+			result = '<span class="msg">The file was uploaded successfully!<\/span><br/><br/>';
+			// alert(info);
+		}
+		else {
+			result = '<span class="emsg">There was an error during file upload!<\/span><br/><br/>';
+			// alert(info);
+		}
+		document.getElementById('f1_upload_process').style.visibility = 'hidden';
+		// document.getElementById('f1_upload_form').innerHTML = result + '<label>File: <input name="myfile" type="file" size="30" /><\/label><label><input type="submit" name="submitBtn" class="sbtn" value="Upload" /><\/label>';
+		// document.getElementById('f1_upload_form').style.visibility = 'visible';      
+		bannerAdminPage.ajaxGetBannerItems();
+		document.getElementById('iframe').src = document.getElementById('iframe').src;
+		document.getElementById('submitBtn').value = 'Insert';
+		document.getElementById('position').value = '';
+		document.getElementById('hyperlink').value = '';
+		document.getElementById('itemUpdateId').value = '';
+		document.getElementById('oldPosition').value = '';
+		document.getElementById('myfile').value = '';
+      return true;
+}
+	
+</script>
+		<style type="text/css">
+			/*demo page css*/
+			body{ font: 67% "Trebuchet MS", sans-serif; margin: 50px;}
+			.ui-dialog .ui-dialog-buttonpane {
+				font-size: 90%;
+				text-align: left;
+			}
+			button {
+				background-image: url("images/button.gif");
+				color: #FFFFFF;
+				font-family: Geneva,Arial,Helvetica,sans-serif;
+				font-size: 24px;
+				font-weight: bold;
+				height: 22px;
+				width: 94px;
+			}
+			.ui-widget-content {
+				color: #FFFFFF;
+				text-align: center;
+			}
+			.demoHeaders { margin-top: 2em; }
+			#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+			#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+			ul#icons {margin: 0; padding: 0;}
+			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+			ul#icons span.ui-icon {float: left; margin: 0 4px;}
+		</style>
+        <link type="image/x-icon" href="/images/layout/favicon.ico" rel="icon">
+</head>
+
+<body class="body_main" onload="init();">
+<form action="../php_scripts/upload.php" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="startUpload();">
+<div class="header" onmouseover="// alert('header');">
+    <div class="logo" onmouseover="// alert('logo');">
+    	<div class="logo_content">
+        	<img src="images/logo.png" style="border:0px; padding:0px;" /></div>
+  </div>
+    <div class="banner" onmouseover="// alert('banner');">
+    	<div class="banner_content">
+        Arris Treasures Flash Banner Goes Here...
+        </div>
+    </div>
+</div>
+<div class="menu_wrapper" onmouseover="// alert('menu wrapper');">
+    <div class="menu" onmouseover="// alert('menu');">
+      <table width="300" border="0" cellpadding="0" cellspacing="0">
+        <tr align="center">
+          <td onmouseover="hover_menu_enter_update('1');" onmouseout="hover_menu_exit_update('1');"><a href="javascript:ajaxPageRequest('link1.html');" style="text-decoration:none; color:#FFFFFF;">Home</a></td>
+            <td onmouseover="hover_menu_enter_update('2');" onmouseout="hover_menu_exit_update('2');">Products</td>
+            <td onmouseover="hover_menu_enter_update('3');" onmouseout="hover_menu_exit_update('3');"><a href="javascript:ajaxPageContentRequest('pages/test1.html');" style="text-decoration:none; color:#FFFFFF;">About</a></td>
+            <td onmouseover="hover_menu_enter_update('4');" onmouseout="hover_menu_exit_update('4');"><a href="javascript:checkAdminLogin();" style="text-decoration:none; color:#FFFFFF;">Admin</a></td>
+          </tr>
+      </table>
+        <div class="menu_item" id="menu_itm" style="left:100px;" onmouseover="enter_menu();" onmouseout="exit_menu();">
+        	<ul class="menu_list">
+            	<li><a href="gotoPage(1);" class="menu_list_item">link 1</a></li>
+                <li><a href="gotoPage(2);" class="menu_list_item">link 2</a></li>
+                <li><a href="gotoPage(3);" class="menu_list_item">link 3</a></li>
+                <li><a href="gotoPage(4);" class="menu_list_item">link 4</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content_wrapper" onmouseover="// alert('content');">
+  <div class="page_area" id="page_area"><!-- <div class="title_padding">content area 1 - version 1.0.3</div> -->
+  	<div style="float:left; width:473px; height:380px; background-color:#000000; border:0px; margin:1px; border-right:0px; margin-right:0px;">
+      <h1 class="header">Online Interact launches Arris Treasures.</h1>
+            <p style="color:#F8D583; font-size:12px; font-family:Arial,Helvetica,FreeSans,'Luxi-sans','Nimbus Sans L',sans-serif; padding:6px;">
+                Welcome to Arris Treasures <span style="color:#FFFFFF">(home to Scotlands most prestigious Pewter Treasures).</span></p>
+            <p style="color:#00FF99; font-size:12px; font-family:Arial,Helvetica,FreeSans,'Luxi-sans','Nimbus Sans L',sans-serif; padding:6px;">From Kilt Pins and Broaches to  Trinkets and Jewlery, Arris Treasures has the most extensive range of Pewter products avaliable.</p>
+            <p style="color:#00CCFF; font-size:12px; font-family:Arial,Helvetica,FreeSans,'Luxi-sans','Nimbus Sans L',sans-serif; padding:6px;">Why not check out our online catalogue to see what we have to offer by searching above or simply browse the categories at your leisure.</p>
+            <p style="color:#FFFFFF; font-size:12px; font-family:Arial,Helvetica,FreeSans,'Luxi-sans','Nimbus Sans L',sans-serif; padding:6px;">We pride ourselves at being at the top of our game where 100 percent quality is always guaranteed.  Innovation is one of our key objectives that allows us to bring brand new lines to our extensive range.</p>
+            <p style="color:#F8D583; font-size:12px; font-family:Arial,Helvetica,FreeSans,'Luxi-sans','Nimbus Sans L',sans-serif; padding:6px;">Quality of Service to our customers is extremely important, which is why we ship out orders on a daily basis to ensure that they are delivered to you as soon as humanly possible.</p>
+            <p style="color:#00CCFF; font-size:12px; font-family:Arial,Helvetica,FreeSans,'Luxi-sans','Nimbus Sans L',sans-serif; padding:6px;">All items are produced by Arris in Scotland, United Kingdom.</p>
+    </div>
+    <img src="images/kilt-pin-home.jpg" class="image_main" style="border:0px; margin:1px; border-left:0px; margin-left:0px; float:left" />
+    <div style="clear:both"/>
+    </div>
+</div>
+</form>
+<iframe id="upload_target" name="upload_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
+<!-- ui-dialog -->
+<div id="remove-dialog" title="Remove Idea">
+    <p>Please select reason for removing Idea from list.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+In order to add a new page to the application, the following steps should be carried out:
+
+1. Add menu item to new page in common.js
+2. Create new html page with initial structure in root.
+3. Create basic page object and place in javascripts/pageObjects directory Note: ensure object is named starting Uppercase.
+4. Inlcude reference to new pageObject and instantiate in init() method in index.js.
+5. Add appropriate calls, members & utilityObjects and references to new pageObject as appropriate.

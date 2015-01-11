@@ -1,0 +1,65 @@
+/* Curved cutout Borders*/
+
+.curved {
+  background: transparent; 
+  width:40%;
+  }
+.curved h1, .curved p {
+  margin:0 10px;
+  }
+.curved h1 {
+  font-size:2em; 
+  color:#fff;
+  }
+.curved p {
+  padding-bottom:0.5em;
+  }
+.curved .b1 {
+  display:block; 
+  overflow:hidden; 
+  height:1px; 
+  margin:0 4px; 
+  background:#fff;
+  font-size:1px;
+  }
+.curved .b2 {
+  display:block; 
+  overflow:hidden; 
+  height:1px; 
+  margin:0 4px; 
+  background:#e0cea3; 
+  border-left:1px solid #fff; 
+  border-right:1px solid #fff; 
+  margin:0 4px; 
+  height:2px;
+  font-size:1px;
+  }
+.curved .b3 {
+  display:block; 
+  overflow:hidden; 
+  height:1px; 
+  margin:0 4px; 
+  background:#e0cea3; 
+  border-left:1px solid #fff; 
+  border-right:1px solid #fff; 
+  margin:0 3px;
+  font-size:1px;
+  }
+.curved .b4 {
+  display:block; 
+  overflow:hidden; 
+  height:1px; 
+  margin:0 4px; 
+  background:#e0cea3; 
+  border-left:1px solid #fff; 
+  border-right:1px solid #fff; 
+  margin:0; height:1px; 
+  border-width:0 3px 0 3px;
+  font-size:1px;
+  }
+.curved .boxcontent {
+  display:block; 
+  background:#e0cea3; 
+  border:0 solid #fff; 
+  border-width:0 1px;
+  }

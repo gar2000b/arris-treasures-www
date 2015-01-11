@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <style type="text/css">
+    <!--
+    -->
+    </style>
+    <script type="text/javascript" src="../javascripts/xmlhttpobject.js"></script>
+    <script type="text/javascript" src="../javascripts/common.js"></script>
+    <script type="text/javascript">
+	
+		var ebayIdFlag = false;
+		var imageUploadFlag = false;
+	
+		function startUpload(){
+			// alert('Is start upload called?');
+			// alert('starting');
+			document.getElementById('f1_upload_process').style.display = 'inline';
+			document.f.submit();
+			// stopUpload();
+			// alert('submitted');
+		}
+		
+		function stopUpload(imageURL, id){
+			// alert('Have I been stopped? - ' + imageURL);
+			document.getElementById('mainImage').src = '';
+			document.getElementById('mainImage').src = imageURL;
+			document.getElementById('transactionId').value = id;
+			document.getElementById('check1').style.display = 'inline';
+			document.getElementById('check2').style.display = 'none';
+			document.getElementById('check3').style.display = 'none';
+			document.getElementById('completeDetails').style.display = 'none';
+			document.getElementById('f1_upload_process').style.display = 'none';
+			imageUploadFlag = true;
+		}
+		
+/*		function stopUpload(){
+			// alert('Have I been stopped? - ' + imageURL);
+			document.getElementById('mainImage').src = '';
+			document.getElementById('mainImage').src = 'http://www.arristreasures.com/images/keyrings_1/50_bigben-small-3.bmp';
+			document.getElementById('transactionId').value = 50;
+			document.getElementById('check1').style.display = 'inline';
+			document.getElementById('check2').style.display = 'none';
+			document.getElementById('check3').style.display = 'none';
+			document.getElementById('completeDetails').style.display = 'none';
+			document.getElementById('f1_upload_process').style.display = 'none';
+		}*/
+		
+		function ajaxUpdateEbayID()
+		{
+			if(imageUploadFlag == true) {
+				// alert("ajaxUpdateEbayID called");
+				var thisdate = new Date();
+				var type = "&type=updateEbayID";
+				var ebayID = "&ebayID=" + document.getElementById('ebayID').value;
+				var transactionID = "&transactionID=" + document.getElementById('transactionId').value;
+				var serverPage = "http://www.arristreasures.com/php_scripts/main_ajax.php?time=" + thisdate.getTime() + type + ebayID + transactionID;
+				
+				xmlhttp = getxmlhttp();
+				xmlhttp.open("GET", serverPage);
+				xmlhttp.onreadystatechange = function(){ajaxUpdateEbayIDHandler(xmlhttp);}
+				xmlhttp.send(null);
+			}
+			else {
+				alert("Details not submitted\n\n1. Please ensure you have uploaded your image in step 1");
+			}
+		}
+		
+		function ajaxUpdateEbayIDHandler(xmlhttp)
+		{
+			if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+			{
+				// Get handle on markup to update...
+				var successFlag = xmlhttp.responseText;
+				if(successFlag == "success" && document.getElementById('transactionId').value.length > 0 && document.getElementById('ebayID').value.length > 0) {
+					document.getElementById('check2').style.display = 'inline';
+					ebayIdFlag = true;
+				} else {
+					alert("eBay ID not updated\nPlease ensure you have uploaded your image or entered your ID \nor please refresh listing and try again \nor feel free to send us a message via eBay.");
+				}
+			}
+		}
+		
+		function ajaxSubmitDetails()
+		{
+			if(ebayIdFlag == false || imageUploadFlag == false) {
+				alert("Details not submitted\n\n1. Please ensure you have uploaded your image in step 1 &\n2. Please ensure you have supplied your ebay user ID in step 2.");
+			}
+			else if(document.getElementById('transactionId').value.length > 0) {
+				var thisdate = new Date();
+				var type = "&type=submitDetails";
+				var transactionID = "&transactionID=" + document.getElementById('transactionId').value;
+				var serverPage = "http://www.arristreasures.com/php_scripts/main_ajax.php?time=" + thisdate.getTime() + type + transactionID;
+				
+				xmlhttp = getxmlhttp();
+				xmlhttp.open("GET", serverPage);
+				xmlhttp.onreadystatechange = function(){ajaxSubmitDetailsHandler(xmlhttp);}
+				xmlhttp.send(null);
+			}
+			else {
+				// alert("Details not submitted\nPlease ensure you have uploaded your image and supplied your ebay user ID.");
+				alert("Details not submitted\n\n1. Please ensure you have uploaded your image in step 1 &\n2. Please ensure you have supplied your ebay user ID in step 2.");
+			}
+		}
+		
+		function ajaxSubmitDetailsHandler(xmlhttp)
+		{
+			if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+			{
+				// Get handle on markup to update...
+				var successFlag = xmlhttp.responseText;
+				if(successFlag == "success" && document.getElementById('transactionId').value.length > 0) {
+					document.getElementById('check3').style.display = 'inline';
+					document.getElementById('completeDetails').style.display = 'inline';
+				} else {
+					alert("Sorry, there appeared to be a problem submitting your details\nPlease refresh the listing and try again later.");
+				}
+			}
+		}
+		
+	</script>
+</head>
+
+<body bgcolor="#000000">
+<form name="f" action="../php_scripts/upload_keyring_images_1.php" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="alert('Have I been submitted???'); startUpload();" >
+<div style="width:600px; height:780px; position:absolute;" align="center">
+		<br />
+  <span style="color:#00FF99; font-size:12px; font-family:Arial, Helvetica, FreeSans, 'Luxi-sans', 'Nimbus Sans L', sans-serif; padding:6px;">1. Please select your Image File for Upload.</span><br />
+        <br /><input type="file" id="myfile" name="myfile" style="color:#003399" onchange="startUpload();" />
+<img name="check1" id="check1" src="../images/check-step-1.png" alt="ok" longdesc="ok" style="position:relative; bottom:-10px; display:none;" /><br />
+        <br />
+        <p id="f1_upload_process" style="display:none; color:#3399FF; position:relative;" align="center">Inserting...<br/><img src="../ajaxphpupload/loader.gif" /></p>
+  <div style="width:400px; height:300px; background-color:#000000;" align="center">
+   	<img id="mainImage" name="mainImage" src="../images/einstein.png" align="bottom" style="max-width:100%; max-height:100%" />
+	<br />
+    <br />
+    <span style="color:#00FF99; font-size:12px; font-family:Arial, Helvetica, FreeSans, 'Luxi-sans', 'Nimbus Sans L', sans-serif; padding:6px;">2. Please enter your eBay User ID here and click ('Enter') button:</span><br />
+    <br />
+    <input type="text" id="ebayID" name="ebayID" />&nbsp;<input type="button" value="Enter" onclick="ajaxUpdateEbayID();" />
+    <img name="check2" id="check2" src="../images/check-step-2.png" alt="ok" longdesc="ok" style="position:relative; bottom:-10px; display:none;" /><br />
+    <br />
+    <span style="color:#00FF99; font-size:12px; font-family:Arial, Helvetica, FreeSans, 'Luxi-sans', 'Nimbus Sans L', sans-serif; padding:6px;">3. Please submit your details by clicking ('Submit Your Details') if OK:</span><br />
+    <br />
+    <input type="button" value="Submit Your Details" onclick="ajaxSubmitDetails();" />
+    <img name="check3" id="check3" src="../images/check-step-3.png" alt="ok" longdesc="ok" style="position:relative; bottom:-10px; display:none;" /><br />
+    <br />
+    <div id="completeDetails" style="display:none">
+        <span style="color:#00FF99; font-size:12px; font-family:Arial, Helvetica, FreeSans, 'Luxi-sans', 'Nimbus Sans L', sans-serif; padding:6px;">Thank you, please click <strong>('Buy it Now')</strong> from the top of this listing page.</span><br />
+        <br />
+        <input type="button" value="Please go to the top of this listing &amp; then click ('Buy it Now')." onclick="parent.window.scrollTo(0, 0);" />
+    </div>
+    <input type="hidden" id="transactionId" name="transactionId" value="" />
+    <iframe onload="" id="upload_target" name="upload_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
+  </div>
+</div>
+</form>
+</body>
+</html>

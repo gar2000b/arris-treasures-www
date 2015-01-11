@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../javascripts/datatable/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+		<script src="../javascripts/datatable/jquery-1.9.1.min.js"></script>
+		<script src="../javascripts/datatable/jquery.dataTables.js"></script>
+        <script type="text/javascript">
+			// "sDom": '<"top"flp<"clear">>rt<"bottom"i<"clear">>',
+			$(document).ready(function() {
+				$('#example').dataTable( {
+					"sDom": '<"top">rt<"bottom"p<"clear">>',
+					"bProcessing": true,
+					"bServerSide": true,
+					"sAjaxSource": "example.php"
+				} );
+			} );
+        </script>
+        
+        <style>
+			body {
+				font: 70%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+				margin: 0;
+				padding: 0;
+				color: #333;
+				background-color: #fff;
+			}
+			
+			
+			div.container {
+/*				min-width: 980px;
+				margin: 0 auto;*/
+				margin: 0 auto;
+			}
+        </style>
+
+    <title>Server Side Data Table</title>
+    </head>
+
+	<body>
+		<br />
+		<div class="container" style="width:820px;">
+            <table id="example" class="display" width="100%">
+                <thead>
+                    <tr>
+                        <th width="15%">Groups</th>
+                        <th width="42.5%">Pages</th>
+                        <th width="42.5%">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Row 1 Data 1</td>
+                        <td>Row 1 Data 2</td>
+                        <td>etc</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2 Data 1</td>
+                        <td>Row 2 Data 2</td>
+                        <td>etc</td>
+                    </tr>
+                </tbody>
+            </table>
+		</div>
+	</body>
+</html>

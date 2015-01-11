@@ -1,0 +1,310 @@
+@charset "utf-8";
+/* CSS Document */
+p
+{
+	/*color:yellow;*/
+	font-family:"arial", sans-serif;
+	font-size:1.2em;
+}
+
+.body_main
+{
+	color:white;
+	background-color:black;
+}
+
+.special
+{
+	font-style:italic;
+}
+
+.header
+{
+	margin:auto;
+	width:800px;
+	clear:both;
+	border:0px;
+	padding:0px;
+}
+
+.logo
+{
+	background-color:#336699;
+	/*height:150px;*/
+	/*width:40%;*/
+	border:0px;
+	padding:0px;
+	float:left;
+}
+
+.logo_content
+{
+	border:0px;
+	padding:0px;
+	/*padding:6px;*/
+}
+
+.banner
+{
+	background-color:#000000;
+	height:150px;
+	width:70%;
+	float:right;
+	border:none;
+	padding:none;
+}
+
+.banner_content
+{
+	padding:6px;
+	border:none;
+	padding:none;
+}
+
+.menu_wrapper
+{
+	width:800px;
+	margin:auto;
+}
+
+.menu
+{
+	margin:auto;
+	width:800px;
+	height:20px;
+	clear:both;
+	background-color:#003366;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+
+.menu_item
+{
+	position:relative;
+	width:120px;
+	/* height:200px; */
+	background-color:#003366;
+	visibility:hidden;
+	z-index:10;
+}
+
+.content_wrapper
+{
+	margin:auto;
+	padding:6px;
+	width:788px;
+	/* height:300px; */
+	/* clear:both; */
+	background-color:#336699;
+}
+
+.page_area
+{
+	margin:auto;
+	background-color:#FFFFFF;
+	width:782px;
+	/*height:365px;*/
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;	
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.page_area_inner_black
+{
+	
+}
+
+.info
+{
+	position:absolute;
+	bottom:14px;
+	right:16px;
+	width:120px;
+}
+
+.menu_list
+{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	padding-left:10px;
+	padding-top:6px;
+	padding-bottom:6px;
+	left:0px;
+	font:Arial, Helvetica, sans-serif;
+	list-style:none;
+}
+
+.menu_list_item
+{
+	color:#FFFFFF;
+	text-decoration:none;
+	padding:2px;
+	padding-left:4px;
+	padding-right:4px;
+}
+
+a:hover
+{
+	background:#3399FF;
+}
+
+.title_padding
+{
+	padding:5px;
+	float:left;
+	font-weight:bold;
+	width:350px;
+}
+
+.content
+{
+	padding:6px;
+}
+
+.image_main
+{
+	margin:6px;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;
+	float:right;
+}
+
+.led_div_green
+{
+	/*margin:auto;*/
+	z-index:2;
+	position:relative;
+	background-color:#00FF00;
+	width:10px;
+	height:10px;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;	
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.led_div_red
+{
+	/*margin:auto;*/
+	z-index:1;
+	position:relative;
+	background-color:#FF0033;
+	width:10px;
+	height:10px;
+	top:-12px;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;	
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.led_span_left_without_float
+{
+	/*margin:auto;*/
+	z-index:1;
+	position:relative;
+	background-color:#0099FF;
+	width:10px;
+	height:10px;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;	
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.led_span_left
+{
+	/*margin:auto;*/
+	z-index:1;
+	position:relative;
+	float:left;
+	background-color:#0099FF;
+	width:10px;
+	height:10px;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;	
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.led_span_block_blue
+{
+	/*margin:auto;*/
+	z-index:3;
+	position:relative;
+	float:left;
+	background-color:#0099FF;
+	width:10px;
+	height:10px;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;	
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	padding:0px;
+}
+
+.led_span_block_green
+{
+	/*margin:auto;*/
+	z-index:2;
+	position:relative;
+	float:left;
+	top:-120px;
+	background-color:#00CC33;
+	width:10px;
+	height:10px;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;	
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	padding:0px;
+}
+
+.led_span_block_red
+{
+	/*margin:auto;*/
+	z-index:1;
+	position:relative;
+	float:left;
+	top:-240px;
+	background-color:#FF0033;
+	width:10px;
+	height:10px;
+	border-style:solid;
+	border-color:#000000;
+	border-width:1px;	
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	padding:0px;
+}
+
+/* LEDs Here */
+.led_off
+{
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+.header
+{
+	color:#FFFFFF; font-size:18px; font-family:Arial,Helvetica,FreeSans,'Luxi-sans','Nimbus Sans L',sans-serif; padding:6px;
+}

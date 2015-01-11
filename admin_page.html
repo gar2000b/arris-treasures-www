@@ -1,0 +1,21 @@
+<div class="title_padding">Admin Page</div>
+<br />
+<br />
+<div class="content">
+  <div>
+	<p>Welcome to the admin page</p>
+    <input type="button" name="eBayAPICall" id="eBayAPICall" value="eBay API Call" onclick="gotoEbayAPICall();" />
+    <br/><br/>
+    <input type="button" name="returns" id="returns" value="Returns" onclick="ajaxPageContentRequest('pages/returns.php');" />
+    <br/><br/>
+    <input type="button" name="banner" id="banner" value="Banner" onclick="ajaxPageContentRequest('pages/banner_admin.php');" />
+    <br/><br/>
+    <input type="button" name="woip" id="woip" value="World of Ideas (Products)" onclick="ajaxPageContentRequest('pages/world_of_ideas_products.php');" />
+    <br/><br/>
+    <input type="button" name="woii" id="woii" value="World of Ideas (Infrastructure)" onclick="ajaxPageContentRequest('pages/world_of_ideas_infrastructure.php');" />
+    <br/><br/>
+    <input type="button" name="woip" id="woip" value="Product Categories" onclick="ajaxPageContentRequest('pages/products/categories.html');" />
+    <br/><br/>
+    <input type="button" name="logout" id="logout" value="Logout" onclick="adminLogout();" />
+  </div>
+</div>
